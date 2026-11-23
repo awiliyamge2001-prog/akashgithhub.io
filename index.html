@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Akash Williyamge | Software Engineer — Distributed Microservices & Agentic AI</title>
+  <meta name="description" content="Professional portfolio of Akash Williyamge - Software Engineer specializing in Spring Boot Microservices, Docker, Distributed Systems, and Autonomous Agentic AI with Python and RAG.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            slate: {
+              850: '#111726',
+              900: '#0c101a',
+              950: '#070a12'
+            },
+            accent: {
+              blue: '#3b82f6',
+              cyan: '#0ea5e9',
+              emerald: '#10b981',
+              indigo: '#6366f1'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Mermaid.js -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen relative bg-ambient-grid selection:bg-blue-600 selection:text-white">
+
+  <!-- Ambient Engineering Backlight Gradients -->
+  <div class="fixed top-0 left-1/4 w-[36rem] h-[36rem] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none -z-10"></div>
+  <div class="fixed top-1/2 right-10 w-[30rem] h-[30rem] bg-indigo-600/8 rounded-full blur-[140px] pointer-events-none -z-10"></div>
+  <div class="fixed bottom-10 left-1/3 w-[32rem] h-[32rem] bg-emerald-600/8 rounded-full blur-[130px] pointer-events-none -z-10"></div>
+
+  <!-- ======================================================== -->
+  <!-- NAVIGATION BAR                                           -->
+  <!-- ======================================================== -->
+  <header class="sticky top-0 z-40 w-full glass-header">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 py-4 flex items-center justify-between">
+      
+      <!-- Logo Mark -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-9 h-9 rounded-lg bg-blue-600/20 border border-blue-500/30 flex items-center justify-center font-bold text-blue-400 font-mono text-sm group-hover:border-blue-400 transition-colors">
+          AW
+        </div>
+        <div class="flex flex-col">
+          <span class="font-bold text-sm tracking-tight text-white group-hover:text-blue-400 transition-colors">Akash Williyamge</span>
+          <span class="text-xs text-slate-400 font-mono">Software Engineer</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center gap-7 text-xs font-medium text-slate-300">
+        <a href="#overview" class="hover:text-blue-400 transition-colors">Overview</a>
+        <a href="#transitflow" class="hover:text-blue-400 transition-colors flex items-center gap-1.5">
+          <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span> TransitFlow
+        </a>
+        <a href="#smart-farm-hub" class="hover:text-emerald-400 transition-colors flex items-center gap-1.5">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Smart Farm AI
+        </a>
+        <a href="#skills" class="hover:text-blue-400 transition-colors">Skills</a>
+        <a href="#education" class="hover:text-blue-400 transition-colors">Education</a>
+        <a href="#contact" class="hover:text-blue-400 transition-colors">Contact</a>
+      </nav>
+
+      <!-- Right CTAs: Availability & CV -->
+      <div class="hidden lg:flex items-center gap-3">
+        <!-- Live status -->
+        <div class="flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-950/70 border border-emerald-500/30 text-emerald-300 text-xs font-mono">
+          <span class="pulse-indicator"></span>
+          <span>Open to Internships</span>
+        </div>
+
+        <!-- View Resume -->
+        <button data-open-resume class="px-3.5 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700/80 text-xs font-medium flex items-center gap-1.5 transition-colors">
+          <i data-lucide="file-text" class="w-3.5 h-3.5 text-blue-400"></i>
+          <span>Curriculum Vitae</span>
+        </button>
+
+        <!-- GitHub -->
+        <a href="https://github.com/awiliyamge2001-prog" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-700/80 transition-colors" title="GitHub Profile">
+          <i data-lucide="github" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-400 hover:text-white">
+        <i data-lucide="menu" class="w-5 h-5"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-6 bg-slate-900 border-b border-slate-800 space-y-3">
+      <a href="#overview" class="block py-2 text-sm text-slate-300 hover:text-blue-400">Overview</a>
+      <a href="#transitflow" class="block py-2 text-sm text-slate-300 hover:text-blue-400">TransitFlow (Microservices)</a>
+      <a href="#smart-farm-hub" class="block py-2 text-sm text-slate-300 hover:text-emerald-400">Smart Farm Hub (Agentic AI)</a>
+      <a href="#skills" class="block py-2 text-sm text-slate-300 hover:text-blue-400">Skills Matrix</a>
+      <a href="#education" class="block py-2 text-sm text-slate-300 hover:text-blue-400">Education & Credentials</a>
+      <a href="#contact" class="block py-2 text-sm text-slate-300 hover:text-blue-400">Contact & Inquiries</a>
+      <div class="pt-3 border-t border-slate-800 flex items-center justify-between">
+        <button data-open-resume class="px-3.5 py-2 rounded-lg bg-blue-600 text-white text-xs font-medium flex items-center gap-1.5">
+          <i data-lucide="file-text" class="w-3.5 h-3.5"></i> View CV
+        </button>
+        <a href="https://github.com/awiliyamge2001-prog" target="_blank" class="text-xs text-slate-400 flex items-center gap-1">
+          <i data-lucide="github" class="w-3.5 h-3.5"></i> GitHub
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ======================================================== -->
+  <!-- HERO / OVERVIEW SECTION                                  -->
+  <!-- ======================================================== -->
+  <section id="overview" class="relative pt-16 sm:pt-24 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      
+      <!-- Left Column: Professional Narrative -->
+      <div class="lg:col-span-7 space-y-6">
+        
+        <!-- Academic Status Pill -->
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-xs font-mono text-slate-300">
+          <span class="w-2 h-2 rounded-full bg-blue-400"></span>
+          <span>BSc (Hons) IT Undergraduate • Horizon Campus (2023–2027)</span>
+        </div>
+
+        <!-- Headline -->
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.15]">
+          Engineering High-Availability <br>
+          <span class="gradient-text-blue">Microservices</span> & <br>
+          Pragmatic <span class="gradient-text-emerald">Agentic AI Systems</span>
+        </h1>
+
+        <!-- Executive Narrative -->
+        <p class="text-sm sm:text-base text-slate-300 leading-relaxed max-w-2xl">
+          I am <strong class="text-white font-semibold">Akash Williyamge</strong>, a Software Engineer based in Colombo, Sri Lanka. I specialize in designing scalable, fault-tolerant distributed backends with <span class="text-blue-400 font-medium">Spring Boot 3</span>, <span class="text-blue-400 font-medium">Docker</span>, and <span class="text-blue-400 font-medium">MongoDB</span>, paired with building autonomous multi-agent intelligence pipelines utilizing <span class="text-emerald-400 font-medium">Python</span>, <span class="text-emerald-400 font-medium">RAG</span>, and sub-second LLM orchestration.
+        </p>
+
+        <!-- CTAs -->
+        <div class="flex flex-wrap items-center gap-3.5 pt-2">
+          <a href="#transitflow" class="px-5 py-3 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs sm:text-sm flex items-center gap-2 shadow-lg shadow-blue-600/20 transition-all">
+            <span>Explore Systems Architecture</span>
+            <i data-lucide="arrow-down" class="w-4 h-4"></i>
+          </a>
+
+          <a href="#ai-playground" class="px-5 py-3 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700/80 text-slate-200 hover:text-white font-medium text-xs sm:text-sm flex items-center gap-2 transition-all">
+            <i data-lucide="sparkles" class="w-4 h-4 text-emerald-400"></i>
+            <span>Interactive AI Console</span>
+          </a>
+
+          <button data-open-resume class="px-4 py-3 rounded-lg bg-transparent hover:bg-slate-900 border border-slate-800 text-slate-300 hover:text-white text-xs sm:text-sm font-medium flex items-center gap-2 transition-colors">
+            <i data-lucide="download" class="w-4 h-4 text-blue-400"></i>
+            <span>Resume (PDF)</span>
+          </button>
+        </div>
+
+        <!-- Quick Credentials Strip -->
+        <div class="flex flex-wrap items-center gap-6 pt-4 text-xs font-mono text-slate-400 border-t border-slate-800">
+          <div class="flex items-center gap-2">
+            <i data-lucide="map-pin" class="w-3.5 h-3.5 text-slate-500"></i>
+            <span>Colombo, Sri Lanka</span>
+          </div>
+          <button data-copy-text="a.wiliyamge2001@gmail.com" data-copy-label="Email address copied to clipboard" class="flex items-center gap-2 hover:text-blue-400 transition-colors group">
+            <i data-lucide="mail" class="w-3.5 h-3.5 text-slate-500 group-hover:text-blue-400"></i>
+            <span>a.wiliyamge2001@gmail.com</span>
+            <i data-lucide="copy" class="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+          </button>
+          <button data-copy-text="+94717046911" data-copy-label="Phone number copied" class="flex items-center gap-2 hover:text-blue-400 transition-colors group">
+            <i data-lucide="phone" class="w-3.5 h-3.5 text-slate-500 group-hover:text-blue-400"></i>
+            <span>+94 71 704 6911</span>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Right Column: Engineering Snapshot Card -->
+      <div class="lg:col-span-5">
+        <div class="pro-card p-6 sm:p-7 space-y-5 bg-slate-900/90 shadow-xl border border-slate-800">
+          
+          <div class="flex items-center justify-between pb-3 border-b border-slate-800">
+            <div class="flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-blue-400"></span>
+              <span class="text-xs font-mono font-semibold text-slate-200">CORE ARCHITECTURE SPECIFICATIONS</span>
+            </div>
+            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-blue-950/80 text-blue-300 border border-blue-800/60">VERIFIED</span>
+          </div>
+
+          <!-- Highlight Metric Badges Grid -->
+          <div class="grid grid-cols-2 gap-3.5">
+            
+            <div class="p-3.5 rounded-lg bg-slate-950/70 border border-slate-800">
+              <div class="text-2xl font-bold text-blue-400 font-mono">5+</div>
+              <div class="text-xs font-semibold text-slate-200 mt-1">Spring Microservices</div>
+              <div class="text-[11px] text-slate-400 mt-0.5">Gateway, Auth, Transit, Traffic, Ticketing</div>
+            </div>
+
+            <div class="p-3.5 rounded-lg bg-slate-950/70 border border-slate-800">
+              <div class="text-2xl font-bold text-emerald-400 font-mono">2-Agent</div>
+              <div class="text-xs font-semibold text-slate-200 mt-1">Autonomous AI System</div>
+              <div class="text-[11px] text-slate-400 mt-0.5">Groq intent router & multi-agent handoff</div>
+            </div>
+
+            <div class="p-3.5 rounded-lg bg-slate-950/70 border border-slate-800">
+              <div class="text-2xl font-bold text-indigo-400 font-mono">20-Doc</div>
+              <div class="text-xs font-semibold text-slate-200 mt-1">Agronomy RAG Base</div>
+              <div class="text-[11px] text-slate-400 mt-0.5">Vector similarity & cold-chain rules</div>
+            </div>
+
+            <div class="p-3.5 rounded-lg bg-slate-950/70 border border-slate-800">
+              <div class="text-2xl font-bold text-cyan-400 font-mono">100%</div>
+              <div class="text-xs font-semibold text-slate-200 mt-1">Containerized Deployment</div>
+              <div class="text-[11px] text-slate-400 mt-0.5">Docker Compose & Postman automated</div>
+            </div>
+
+          </div>
+
+          <!-- Stack Tags -->
+          <div class="space-y-2 pt-1">
+            <span class="text-xs font-mono text-slate-400 block">Primary Technologies:</span>
+            <div class="flex flex-wrap gap-1.5 text-xs font-mono">
+              <span class="px-2 py-1 rounded bg-slate-950 text-blue-300 border border-slate-800">Java / Spring Boot</span>
+              <span class="px-2 py-1 rounded bg-slate-950 text-emerald-300 border border-slate-800">Python / Streamlit</span>
+              <span class="px-2 py-1 rounded bg-slate-950 text-indigo-300 border border-slate-800">Docker Compose</span>
+              <span class="px-2 py-1 rounded bg-slate-950 text-yellow-300 border border-slate-800">MongoDB 5.0</span>
+              <span class="px-2 py-1 rounded bg-slate-950 text-cyan-300 border border-slate-800">Groq / RAG</span>
+            </div>
+          </div>
+
+          <!-- Target Opportunity Banner -->
+          <div class="p-3 rounded-lg bg-blue-950/40 border border-blue-800/40 flex items-center justify-between text-xs font-mono">
+            <span class="text-slate-300">Target Role:</span>
+            <span class="text-blue-400 font-semibold">Software Engineering Intern</span>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================== -->
+  <!-- FLAGSHIP CASE STUDY 1: TRANSITFLOW                       -->
+  <!-- ======================================================== -->
+  <section id="transitflow" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-800/80">
+    <div class="space-y-10">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+        <div class="space-y-2 max-w-3xl">
+          <div class="flex items-center gap-2 text-xs font-mono text-blue-400">
+            <span class="w-2 h-2 rounded-full bg-blue-400"></span>
+            <span>FLAGSHIP CASE STUDY 01 • SERVICE-ORIENTED COMPUTING</span>
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+            TransitFlow — Smart Public Transport & Traffic Microservices
+          </h2>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+            An end-to-end distributed microservices platform engineered with Spring Boot 3.2, Spring Cloud Gateway, Docker, and MongoDB to manage real-time transit schedules, GPS fleet coordinates, live road congestion telemetry, contactless turnstile QR ticketing, and automated commuter advisory broadcasts.
+          </p>
+        </div>
+
+        <div class="flex items-center gap-3 shrink-0">
+          <a href="https://github.com/awiliyamge2001-prog" target="_blank" class="px-4 py-2.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700/80 text-slate-200 text-xs font-semibold flex items-center gap-2 transition-colors">
+            <i data-lucide="github" class="w-4 h-4"></i>
+            <span>Source Code</span>
+          </a>
+          <button data-copy-text="docker compose up --build -d" data-copy-label="Docker Compose command copied" class="px-4 py-2.5 rounded-lg bg-blue-600/10 hover:bg-blue-600/20 text-blue-400 border border-blue-500/30 text-xs font-mono flex items-center gap-2 transition-colors">
+            <i data-lucide="terminal" class="w-4 h-4"></i>
+            <span>docker compose up</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Tech Stack Tags -->
+      <div class="flex flex-wrap gap-2 text-xs font-mono">
+        <span class="px-3 py-1 rounded bg-slate-900 border border-blue-500/30 text-blue-300">Java 17/21</span>
+        <span class="px-3 py-1 rounded bg-slate-900 border border-blue-500/30 text-blue-300">Spring Boot 3.2</span>
+        <span class="px-3 py-1 rounded bg-slate-900 border border-blue-500/30 text-blue-300">Spring Cloud Gateway</span>
+        <span class="px-3 py-1 rounded bg-slate-900 border border-slate-800 text-slate-300">MongoDB 5.0</span>
+        <span class="px-3 py-1 rounded bg-slate-900 border border-slate-800 text-slate-300">8 Docker Containers</span>
+        <span class="px-3 py-1 rounded bg-slate-900 border border-slate-800 text-slate-300">JWT / OAuth 2.0</span>
+        <span class="px-3 py-1 rounded bg-slate-900 border border-slate-800 text-slate-300">Token Bucket Rate Limiting</span>
+        <span class="px-3 py-1 rounded bg-slate-900 border border-slate-800 text-slate-300">OpenAPI 3.0 / Postman</span>
+      </div>
+
+      <!-- Tabbed Engineering Showcase -->
+      <div class="pro-card overflow-hidden bg-slate-900/90 border border-slate-800 shadow-2xl">
+        
+        <!-- Tab Navigation Buttons -->
+        <div class="flex flex-wrap items-center gap-2 p-3 bg-slate-950/80 border-b border-slate-800">
+          <button data-tab-group="transitflow" data-tab-target="tf-tab-arch" class="px-4 py-2 rounded-lg text-xs font-mono font-medium transition-all bg-blue-600/20 text-blue-400 border border-blue-500/40 flex items-center gap-2">
+            <i data-lucide="network" class="w-3.5 h-3.5"></i>
+            <span>Architecture Blueprint</span>
+          </button>
+          <button data-tab-group="transitflow" data-tab-target="tf-tab-services" class="px-4 py-2 rounded-lg text-xs font-mono font-medium transition-all bg-slate-900/60 text-slate-400 border border-slate-800 hover:text-slate-200 flex items-center gap-2">
+            <i data-lucide="layers" class="w-3.5 h-3.5"></i>
+            <span>Microservices Specifications (5 Services)</span>
+          </button>
+          <button data-tab-group="transitflow" data-tab-target="tf-tab-security" class="px-4 py-2 rounded-lg text-xs font-mono font-medium transition-all bg-slate-900/60 text-slate-400 border border-slate-800 hover:text-slate-200 flex items-center gap-2">
+            <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>
+            <span>Security & Container Orchestration</span>
+          </button>
+        </div>
+
+        <!-- Tab 1: Architecture Blueprint (Mermaid Diagram) -->
+        <div id="tf-tab-arch" data-tab-panel="transitflow" class="p-6 sm:p-8 space-y-6">
+          <div class="flex items-center justify-between">
+            <h3 class="text-sm font-semibold text-white flex items-center gap-2">
+              <i data-lucide="git-merge" class="w-4 h-4 text-blue-400"></i>
+              Distributed Microservices Data Flow Diagram
+            </h3>
+            <span class="text-xs font-mono text-slate-400">Port 8080 (Gateway) ➔ Isolated Docker Bridge</span>
+          </div>
+
+          <!-- Mermaid Canvas -->
+          <div class="p-6 rounded-lg bg-slate-950/80 border border-slate-800 flex justify-center overflow-x-auto shadow-inner">
+            <div class="mermaid">
+graph LR
+    Client["📱 Web Client / Turnstile Postman"] -->|OAuth 2.0 / JWT| GW["🌐 API Gateway<br/>(Spring Cloud Gateway :8080)<br/>• Token Bucket Rate Limiting<br/>• JWT Authentication Filter"]
+    
+    subgraph Internal Network ["🔒 Zero-Trust Internal Bridge (X-API-KEY Protected)"]
+        GW -->|X-API-KEY| S1["👤 Auth Service :8081<br/>JWT Issuance & BCrypt"]
+        GW -->|X-API-KEY| S2["🚌 Transit Service :8082<br/>Schedules & GPS Telemetry"]
+        GW -->|X-API-KEY| S3["🚦 Traffic Service :8083<br/>Congestion & Incidents"]
+        GW -->|X-API-KEY| S4["🎟️ Ticketing Service :8084<br/>Dynamic Fares & QR Pass"]
+        GW -->|X-API-KEY| S5["🔔 Notification Service :8085<br/>Commuter Push Alerts"]
+    end
+
+    S1 --> DB[("🍃 MongoDB Database<br/>Port 27017")]
+    S2 --> DB
+    S3 --> DB
+    S4 --> DB
+    S5 --> DB
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs font-mono">
+            <div class="p-4 rounded-lg bg-slate-950/60 border border-slate-800">
+              <span class="text-blue-400 font-semibold block mb-1">Centralized Gateway (:8080)</span>
+              <p class="text-slate-400 font-sans">Single public ingress point handling request routing, cryptographic JWT validation, and token bucket rate limiting (100 req/min per IP).</p>
+            </div>
+            <div class="p-4 rounded-lg bg-slate-950/60 border border-slate-800">
+              <span class="text-emerald-400 font-semibold block mb-1">Zero-Trust Internal Network</span>
+              <p class="text-slate-400 font-sans">Services communicate via internal Docker bridge. Microservices reject external requests lacking verified internal <code class="text-emerald-300">X-API-KEY</code> tokens.</p>
+            </div>
+            <div class="p-4 rounded-lg bg-slate-950/60 border border-slate-800">
+              <span class="text-indigo-400 font-semibold block mb-1">Polyglot Storage & Persistence</span>
+              <p class="text-slate-400 font-sans">Containerized MongoDB 5.0 instances with automated schema initialization scripts for fleet coordinates and immutable digital tickets.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2: Microservices Specifications -->
+        <div id="tf-tab-services" data-tab-panel="transitflow" class="p-6 sm:p-8 space-y-4 hidden">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            
+            <!-- Service 1: Auth -->
+            <div class="p-5 rounded-lg bg-slate-950/60 border border-slate-800 hover:border-blue-500/40 transition-colors space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-mono font-bold text-blue-400">SERVICE 01</span>
+                <span class="text-xs font-mono px-2 py-0.5 rounded bg-slate-900 text-slate-300">Port 8081</span>
+              </div>
+              <h4 class="text-sm font-bold text-white flex items-center gap-2">
+                <i data-lucide="key" class="w-4 h-4 text-blue-400"></i>
+                Auth & User Service
+              </h4>
+              <p class="text-xs text-slate-400">Issues cryptographic JWT tokens, manages user credential hashing with BCrypt, and enforces Role-Based Access Control (RBAC).</p>
+              <div class="pt-2 border-t border-slate-800 text-[11px] font-mono text-slate-400 space-y-1">
+                <div><span class="text-blue-400">POST</span> /api/v1/auth/login</div>
+                <div><span class="text-blue-400">POST</span> /api/v1/auth/register</div>
+                <div><span class="text-blue-400">GET</span> /api/v1/auth/users</div>
+              </div>
+            </div>
+
+            <!-- Service 2: Transit -->
+            <div class="p-5 rounded-lg bg-slate-950/60 border border-slate-800 hover:border-blue-500/40 transition-colors space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-mono font-bold text-blue-400">SERVICE 02</span>
+                <span class="text-xs font-mono px-2 py-0.5 rounded bg-slate-900 text-slate-300">Port 8082</span>
+              </div>
+              <h4 class="text-sm font-bold text-white flex items-center gap-2">
+                <i data-lucide="bus" class="w-4 h-4 text-blue-400"></i>
+                Transit & Route Service
+              </h4>
+              <p class="text-xs text-slate-400">Manages metropolitan bus and train timetables, stops, schedule queries, and real-time GPS fleet coordinate tracking.</p>
+              <div class="pt-2 border-t border-slate-800 text-[11px] font-mono text-slate-400 space-y-1">
+                <div><span class="text-blue-400">GET</span> /api/v1/transit/routes</div>
+                <div><span class="text-blue-400">GET</span> /api/v1/transit/schedules</div>
+                <div><span class="text-blue-400">POST</span> /api/v1/transit/vehicles</div>
+              </div>
+            </div>
+
+            <!-- Service 3: Traffic -->
+            <div class="p-5 rounded-lg bg-slate-950/60 border border-slate-800 hover:border-blue-500/40 transition-colors space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-mono font-bold text-blue-400">SERVICE 03</span>
+                <span class="text-xs font-mono px-2 py-0.5 rounded bg-slate-900 text-slate-300">Port 8083</span>
+              </div>
+              <h4 class="text-sm font-bold text-white flex items-center gap-2">
+                <i data-lucide="alert-triangle" class="w-4 h-4 text-yellow-400"></i>
+                Traffic & Incident Service
+              </h4>
+              <p class="text-xs text-slate-400">Real-time road incident reporting (accidents, roadblocks, construction), congestion severity index scoring, and route telemetry.</p>
+              <div class="pt-2 border-t border-slate-800 text-[11px] font-mono text-slate-400 space-y-1">
+                <div><span class="text-blue-400">POST</span> /api/v1/traffic/incidents</div>
+                <div><span class="text-blue-400">GET</span> /api/v1/traffic/congestion</div>
+                <div><span class="text-blue-400">GET</span> /api/v1/traffic/summary</div>
+              </div>
+            </div>
+
+            <!-- Service 4: Ticketing -->
+            <div class="p-5 rounded-lg bg-slate-950/60 border border-slate-800 hover:border-blue-500/40 transition-colors space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-mono font-bold text-blue-400">SERVICE 04</span>
+                <span class="text-xs font-mono px-2 py-0.5 rounded bg-slate-900 text-slate-300">Port 8084</span>
+              </div>
+              <h4 class="text-sm font-bold text-white flex items-center gap-2">
+                <i data-lucide="qr-code" class="w-4 h-4 text-emerald-400"></i>
+                Ticketing & Booking Service
+              </h4>
+              <p class="text-xs text-slate-400">Digital transit pass generation, dynamic distance fare calculation, and turnstile QR code validation with anti-reuse protection.</p>
+              <div class="pt-2 border-t border-slate-800 text-[11px] font-mono text-slate-400 space-y-1">
+                <div><span class="text-blue-400">POST</span> /api/v1/tickets/book</div>
+                <div><span class="text-blue-400">POST</span> /api/v1/tickets/{id}/validate</div>
+                <div><span class="text-blue-400">GET</span> /api/v1/tickets/fares</div>
+              </div>
+            </div>
+
+            <!-- Service 5: Notification -->
+            <div class="p-5 rounded-lg bg-slate-950/60 border border-slate-800 hover:border-blue-500/40 transition-colors space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-mono font-bold text-blue-400">SERVICE 05</span>
+                <span class="text-xs font-mono px-2 py-0.5 rounded bg-slate-900 text-slate-300">Port 8085</span>
+              </div>
+              <h4 class="text-sm font-bold text-white flex items-center gap-2">
+                <i data-lucide="bell" class="w-4 h-4 text-indigo-400"></i>
+                Notification Service
+              </h4>
+              <p class="text-xs text-slate-400">Broadcasts emergency commuter alerts, delay advisories, and targeted ticket purchase confirmations via push channels.</p>
+              <div class="pt-2 border-t border-slate-800 text-[11px] font-mono text-slate-400 space-y-1">
+                <div><span class="text-blue-400">POST</span> /api/v1/notifications/broadcast</div>
+                <div><span class="text-blue-400">POST</span> /api/v1/notifications/send</div>
+              </div>
+            </div>
+
+            <!-- Service 6: Client App & Gateway -->
+            <div class="p-5 rounded-lg bg-slate-950/60 border border-slate-800 hover:border-blue-500/40 transition-colors space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-mono font-bold text-blue-400">GATEWAY & CLIENT</span>
+                <span class="text-xs font-mono px-2 py-0.5 rounded bg-slate-900 text-slate-300">Port 8080 / 3000</span>
+              </div>
+              <h4 class="text-sm font-bold text-white flex items-center gap-2">
+                <i data-lucide="layout-dashboard" class="w-4 h-4 text-cyan-400"></i>
+                Dashboard & Gateway
+              </h4>
+              <p class="text-xs text-slate-400">Spring Cloud Gateway handling rate limits and routing, paired with an Nginx-served responsive client dashboard.</p>
+              <div class="pt-2 border-t border-slate-800 text-[11px] font-mono text-slate-400 space-y-1">
+                <div><span class="text-blue-400">GET</span> /swagger-ui.html</div>
+                <div><span class="text-blue-400">GET</span> /v3/api-docs</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Tab 3: Security & Container Orchestration -->
+        <div id="tf-tab-security" data-tab-panel="transitflow" class="p-6 sm:p-8 space-y-6 hidden">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            
+            <div class="space-y-4">
+              <h4 class="text-sm font-bold text-white flex items-center gap-2">
+                <i data-lucide="shield" class="w-4 h-4 text-blue-400"></i>
+                Production Security Architecture
+              </h4>
+              <ul class="space-y-3 text-xs text-slate-300">
+                <li class="flex items-start gap-2.5">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-blue-400 shrink-0 mt-0.5"></i>
+                  <span><strong>Stateless JWT Verification:</strong> HMAC-SHA256 signature verification performed at the Gateway ingress filter before forwarding requests to internal services.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-blue-400 shrink-0 mt-0.5"></i>
+                  <span><strong>Distributed Rate Limiting:</strong> Configured at 100 requests per minute per IP token bucket to defend services against DoS abuse.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-blue-400 shrink-0 mt-0.5"></i>
+                  <span><strong>Internal X-API-KEY Filter:</strong> Microservices verify internal gateway tokens to prevent direct bypass access.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="space-y-4">
+              <h4 class="text-sm font-bold text-white flex items-center gap-2">
+                <i data-lucide="box" class="w-4 h-4 text-blue-400"></i>
+                Container Orchestration & QA
+              </h4>
+              <ul class="space-y-3 text-xs text-slate-300">
+                <li class="flex items-start gap-2.5">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-blue-400 shrink-0 mt-0.5"></i>
+                  <span><strong>Docker Compose Cluster:</strong> 8-service local cluster orchestration (`docker compose up --build -d`) with isolated bridge network, health checks, and volume mapping.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-blue-400 shrink-0 mt-0.5"></i>
+                  <span><strong>Automated Postman Test Suites:</strong> Pre-configured collections with assertion scripts covering auth handshakes, ticketing checkout, and incident triggers.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-blue-400 shrink-0 mt-0.5"></i>
+                  <span><strong>Structured Git Branches:</strong> Isolated feature branches per service (`feature/auth-service`, `feature/transit-service`) for clean code reviews.</span>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================== -->
+  <!-- FLAGSHIP CASE STUDY 2: SMART FARM HUB (AGENTIC AI)       -->
+  <!-- ======================================================== -->
+  <section id="smart-farm-hub" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-800/80">
+    <div class="space-y-10">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+        <div class="space-y-2 max-w-3xl">
+          <div class="flex items-center gap-2 text-xs font-mono text-emerald-400">
+            <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+            <span>FLAGSHIP CASE STUDY 02 • APPLIED AGENTIC AI & RAG</span>
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+            Smart Farm Hub — Autonomous Multi-Agent AI & RAG System
+          </h2>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+            A 2-agent autonomous AI system coordinating digital storefront operations, logistics, and agronomy advice for tropical fruit commerce in Sri Lanka. Built with Python 3.11, Streamlit, RAG, and dynamic multi-model routing across Groq, OpenRouter, and OpenAI.
+          </p>
+        </div>
+
+        <div class="flex items-center gap-3 shrink-0">
+          <a href="#ai-playground" class="px-4 py-2.5 rounded-lg bg-emerald-600/10 hover:bg-emerald-600/20 text-emerald-400 border border-emerald-500/30 text-xs font-semibold flex items-center gap-2 transition-colors">
+            <i data-lucide="sparkles" class="w-4 h-4"></i>
+            <span>Test Workbench Simulator</span>
+          </a>
+          <a href="https://github.com/awiliyamge2001-prog" target="_blank" class="px-4 py-2.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700/80 text-slate-200 text-xs font-semibold flex items-center gap-2 transition-colors">
+            <i data-lucide="github" class="w-4 h-4"></i>
+            <span>GitHub Repository</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Tech Stack Tags -->
+      <div class="flex flex-wrap gap-2 text-xs font-mono">
+        <span class="px-3 py-1 rounded bg-slate-900 border border-emerald-500/30 text-emerald-300">Python 3.11</span>
+        <span class="px-3 py-1 rounded bg-slate-900 border border-emerald-500/30 text-emerald-300">Multi-Agent Systems</span>
+        <span class="px-3 py-1 rounded bg-slate-900 border border-emerald-500/30 text-emerald-300">Intent Routing</span>
+        <span class="px-3 py-1 rounded bg-slate-900 border border-slate-800 text-slate-300">RAG (Vector Similarity)</span>
+        <span class="px-3 py-1 rounded bg-slate-900 border border-slate-800 text-slate-300">Groq (Sub-second Inference)</span>
+        <span class="px-3 py-1 rounded bg-slate-900 border border-slate-800 text-slate-300">OpenAI & OpenRouter</span>
+        <span class="px-3 py-1 rounded bg-slate-900 border border-slate-800 text-slate-300">Streamlit UI</span>
+        <span class="px-3 py-1 rounded bg-slate-900 border border-slate-800 text-slate-300">20-Doc Knowledge Corpus</span>
+      </div>
+
+      <!-- Agent Sequence Visualizer -->
+      <div class="pro-card p-6 sm:p-8 space-y-5 bg-slate-900/90 border border-slate-800">
+        <div class="flex items-center justify-between">
+          <h3 class="text-sm font-semibold text-white flex items-center gap-2">
+            <i data-lucide="bot" class="w-4 h-4 text-emerald-400"></i>
+            2-Agent Autonomous Coordination & RAG Pipeline Flow
+          </h3>
+          <span class="text-xs font-mono text-emerald-400">SalesOrchestrator ↔ FarmOperations</span>
+        </div>
+
+        <div class="p-6 rounded-lg bg-slate-950/80 border border-slate-800 flex justify-center overflow-x-auto shadow-inner">
+          <div class="mermaid">
+sequenceDiagram
+    autonumber
+    actor User as 👤 Buyer / Farmer
+    participant Orch as 🤖 SalesOrchestratorAgent
+    participant Router as ⚡ Groq Intent Router
+    participant Ops as 🌾 FarmOperationsAgent
+    participant RAG as 📚 20-Doc Domain Knowledge Base
+    participant Tool as 🧮 Deterministic Python Tools
+    
+    User->>Orch: Inbound Query (Agronomy advice or delivery rate)
+    Orch->>Router: Intent Classification (Llama-3.3-70B, sub-second)
+    alt Intent: Agronomy Advice & Fruit Preservation
+        Router-->>Orch: Route -> [AGRONOMY_PRESERVATION]
+        Orch->>Ops: Delegate query with user session context
+        Ops->>RAG: Vector similarity search across 20-doc agronomy corpus
+        RAG-->>Ops: Return post-harvest shelf-life & packing protocols
+        Ops-->>User: Formulated expert farming recommendation
+    else Intent: Delivery Logistics & Order Booking
+        Router-->>Orch: Route -> [LOGISTICS_CALCULATION]
+        Orch->>Tool: Execute deterministic weight & distance math
+        Tool-->>Orch: Accurate LKR freight fee & delivery window
+        Orch-->>User: Clear order pricing & scheduled dispatch slot
+    end
+          </div>
+        </div>
+      </div>
+
+      <!-- INTERACTIVE DEVELOPER CONSOLE (AI SIMULATOR WORKBENCH) -->
+      <div id="ai-playground" class="pro-card p-6 sm:p-8 bg-slate-900/95 border border-slate-800 shadow-2xl space-y-6">
+        
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slate-800">
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="pulse-indicator"></span>
+              <h3 class="text-base font-bold text-white flex items-center gap-2">
+                <span>Developer Console — Agent Execution Simulator</span>
+                <span class="text-xs font-mono px-2 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-800/60">LIVE</span>
+              </h3>
+            </div>
+            <p class="text-xs text-slate-400 mt-1">
+              Verify how the autonomous multi-agent pipeline routes queries, retrieves RAG context, and triggers deterministic tools in real time.
+            </p>
+          </div>
+
+          <!-- Preset Inquiries -->
+          <div class="flex flex-wrap items-center gap-2">
+            <span class="text-xs font-mono text-slate-400">Preset Queries:</span>
+            <button data-ai-preset="passion" class="px-3 py-1.5 rounded-lg bg-blue-600/20 text-blue-400 border border-blue-500/40 text-xs font-mono transition-colors">
+              Passion Fruit Shelf-Life
+            </button>
+            <button data-ai-preset="delivery" class="px-3 py-1.5 rounded-lg bg-slate-900/80 hover:bg-slate-800 text-slate-300 border border-slate-800 text-xs font-mono transition-colors">
+              8kg Avocado to Kandy
+            </button>
+            <button data-ai-preset="fertilizer" class="px-3 py-1.5 rounded-lg bg-slate-900/80 hover:bg-slate-800 text-slate-300 border border-slate-800 text-xs font-mono transition-colors">
+              Dragon Fruit Fertilizer
+            </button>
+          </div>
+        </div>
+
+        <!-- Simulator Execution Terminal -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+          
+          <!-- Left: Agent Trace Log -->
+          <div class="lg:col-span-5 space-y-2.5">
+            <div class="flex items-center justify-between text-xs font-mono text-slate-400">
+              <span class="flex items-center gap-1.5">
+                <i data-lucide="terminal" class="w-3.5 h-3.5 text-blue-400"></i>
+                Execution Trace
+              </span>
+              <span class="text-emerald-400">Sub-second Latency</span>
+            </div>
+
+            <div id="ai-terminal-steps" class="h-64 overflow-y-auto space-y-2 p-3 rounded-lg bg-slate-950 border border-slate-800 scrollbar-thin shadow-inner">
+              <!-- Animated Steps Injected via JS -->
+            </div>
+          </div>
+
+          <!-- Right: Output & Meta -->
+          <div class="lg:col-span-7 space-y-2.5">
+            <div class="flex items-center justify-between text-xs font-mono text-slate-400">
+              <span class="flex items-center gap-1.5">
+                <i data-lucide="cpu" class="w-3.5 h-3.5 text-emerald-400"></i>
+                Synthesized Output & RAG Context
+              </span>
+              <span class="text-slate-400">Streamlit / Python Agent</span>
+            </div>
+
+            <div id="ai-terminal-meta">
+              <!-- Meta chips injected via JS -->
+            </div>
+
+            <div id="ai-terminal-response" class="h-52 overflow-y-auto">
+              <!-- Response card injected via JS -->
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Custom Prompt Input -->
+        <div class="pt-4 border-t border-slate-800 flex items-center gap-3">
+          <div class="relative flex-1">
+            <input id="ai-custom-input" type="text" placeholder="Type a custom query (e.g. 'Calculate delivery fee for 5kg mangoes to Kandy' or 'Best fertilizer for dragon fruit')..." class="w-full px-4 py-2.5 rounded-lg bg-slate-950 border border-slate-800 focus:border-blue-500 focus:outline-none text-xs sm:text-sm text-slate-200 font-mono placeholder:text-slate-500">
+          </div>
+          <button id="ai-submit-btn" class="px-5 py-2.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs sm:text-sm flex items-center gap-1.5 transition-colors shrink-0">
+            <span>Execute Agent</span>
+            <i data-lucide="send" class="w-3.5 h-3.5"></i>
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================== -->
+  <!-- TECHNICAL SKILLS MATRIX (CATEGORIZED)                    -->
+  <!-- ======================================================== -->
+  <section id="skills" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-800/80">
+    <div class="space-y-8">
+      
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+        <div>
+          <div class="flex items-center gap-2 text-xs font-mono text-blue-400 mb-1">
+            <span class="w-2 h-2 rounded-full bg-blue-400"></span>
+            <span>TECHNICAL CAPABILITIES</span>
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+            Categorized Technical Stack
+          </h2>
+          <p class="text-slate-400 text-xs sm:text-sm mt-1 max-w-xl">
+            Applied competencies across distributed backend systems, autonomous agentic AI pipelines, and cloud containerization.
+          </p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="flex flex-wrap items-center gap-2">
+          <button data-skill-filter="all" class="px-3.5 py-1.5 rounded-lg text-xs font-mono bg-blue-600 text-white font-medium transition-all">All</button>
+          <button data-skill-filter="backend" class="px-3.5 py-1.5 rounded-lg text-xs font-mono bg-slate-900/60 text-slate-400 hover:text-slate-200 transition-all">Backend & Distributed</button>
+          <button data-skill-filter="ai" class="px-3.5 py-1.5 rounded-lg text-xs font-mono bg-slate-900/60 text-slate-400 hover:text-slate-200 transition-all">Agentic AI & ML</button>
+          <button data-skill-filter="database" class="px-3.5 py-1.5 rounded-lg text-xs font-mono bg-slate-900/60 text-slate-400 hover:text-slate-200 transition-all">Databases</button>
+          <button data-skill-filter="devops" class="px-3.5 py-1.5 rounded-lg text-xs font-mono bg-slate-900/60 text-slate-400 hover:text-slate-200 transition-all">DevOps & Cloud</button>
+          <button data-skill-filter="frontend" class="px-3.5 py-1.5 rounded-lg text-xs font-mono bg-slate-900/60 text-slate-400 hover:text-slate-200 transition-all">Frontend</button>
+        </div>
+      </div>
+
+      <!-- Skills Cards Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        
+        <!-- Java / Spring Boot -->
+        <div data-skill-category="backend" class="pro-card p-5 space-y-3">
+          <div class="flex items-center justify-between">
+            <div class="w-10 h-10 rounded-lg bg-blue-600/10 border border-blue-500/20 flex items-center justify-center text-blue-400 font-mono font-bold text-sm">
+              JAVA
+            </div>
+            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-blue-950/80 text-blue-300 border border-blue-800/50">Core Backend</span>
+          </div>
+          <div>
+            <h4 class="text-sm font-bold text-white">Java & Spring Boot</h4>
+            <p class="text-xs text-slate-400 mt-1">Spring Cloud Gateway, Spring Security, JWT authentication, RESTful API design, BCrypt encryption.</p>
+          </div>
+          <div class="flex flex-wrap gap-1.5 text-[11px] font-mono pt-2 border-t border-slate-800">
+            <span class="px-2 py-0.5 rounded bg-slate-950 text-slate-300">Java 17/21</span>
+            <span class="px-2 py-0.5 rounded bg-slate-950 text-slate-300">Spring Boot 3.x</span>
+            <span class="px-2 py-0.5 rounded bg-slate-950 text-slate-300">Cloud Gateway</span>
+          </div>
+        </div>
+
+        <!-- Python & Agentic AI -->
+        <div data-skill-category="ai backend" class="pro-card p-5 space-y-3">
+          <div class="flex items-center justify-between">
+            <div class="w-10 h-10 rounded-lg bg-emerald-600/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 font-mono font-bold text-sm">
+              PY
+            </div>
+            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-emerald-950/80 text-emerald-300 border border-emerald-800/50">Autonomous AI</span>
+          </div>
+          <div>
+            <h4 class="text-sm font-bold text-white">Python & Agentic AI</h4>
+            <p class="text-xs text-slate-400 mt-1">Multi-agent systems, intent classification, RAG architecture, LangChain, LangGraph, Groq, OpenAI & OpenRouter APIs.</p>
+          </div>
+          <div class="flex flex-wrap gap-1.5 text-[11px] font-mono pt-2 border-t border-slate-800">
+            <span class="px-2 py-0.5 rounded bg-slate-950 text-slate-300">RAG Vector Base</span>
+            <span class="px-2 py-0.5 rounded bg-slate-950 text-slate-300">LangGraph</span>
+            <span class="px-2 py-0.5 rounded bg-slate-950 text-slate-300">Streamlit</span>
+          </div>
+        </div>
+
+        <!-- Docker & DevOps -->
+        <div data-skill-category="devops" class="pro-card p-5 space-y-3">
+          <div class="flex items-center justify-between">
+            <div class="w-10 h-10 rounded-lg bg-sky-600/10 border border-sky-500/20 flex items-center justify-center text-sky-400 font-mono font-bold text-sm">
+              OPS
+            </div>
+            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-sky-950/80 text-sky-300 border border-sky-800/50">DevOps</span>
+          </div>
+          <div>
+            <h4 class="text-sm font-bold text-white">Docker & Containerization</h4>
+            <p class="text-xs text-slate-400 mt-1">Multi-container Docker Compose architectures, custom Dockerfiles, bridge networks, health checks, Nginx reverse proxying.</p>
+          </div>
+          <div class="flex flex-wrap gap-1.5 text-[11px] font-mono pt-2 border-t border-slate-800">
+            <span class="px-2 py-0.5 rounded bg-slate-950 text-slate-300">Docker Compose</span>
+            <span class="px-2 py-0.5 rounded bg-slate-950 text-slate-300">Dockerfiles</span>
+            <span class="px-2 py-0.5 rounded bg-slate-950 text-slate-300">Nginx</span>
+          </div>
+        </div>
+
+        <!-- Databases -->
+        <div data-skill-category="database" class="pro-card p-5 space-y-3">
+          <div class="flex items-center justify-between">
+            <div class="w-10 h-10 rounded-lg bg-yellow-600/10 border border-yellow-500/20 flex items-center justify-center text-yellow-400 font-mono font-bold text-sm">
+              DB
+            </div>
+            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-900 text-slate-300 border border-slate-800">Databases</span>
+          </div>
+          <div>
+            <h4 class="text-sm font-bold text-white">MongoDB & SQL Systems</h4>
+            <p class="text-xs text-slate-400 mt-1">Schema design, aggregation pipelines, document indexing, MySQL, PostgreSQL, and SQLite integration.</p>
+          </div>
+          <div class="flex flex-wrap gap-1.5 text-[11px] font-mono pt-2 border-t border-slate-800">
+            <span class="px-2 py-0.5 rounded bg-slate-950 text-slate-300">MongoDB 5.0</span>
+            <span class="px-2 py-0.5 rounded bg-slate-950 text-slate-300">MySQL</span>
+            <span class="px-2 py-0.5 rounded bg-slate-950 text-slate-300">PostgreSQL</span>
+          </div>
+        </div>
+
+        <!-- QA & API Testing -->
+        <div data-skill-category="devops backend" class="pro-card p-5 space-y-3">
+          <div class="flex items-center justify-between">
+            <div class="w-10 h-10 rounded-lg bg-indigo-600/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 font-mono font-bold text-sm">
+              TEST
+            </div>
+            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-indigo-950/80 text-indigo-300 border border-indigo-800/50">Testing & QA</span>
+          </div>
+          <div>
+            <h4 class="text-sm font-bold text-white">Postman & OpenAPI</h4>
+            <p class="text-xs text-slate-400 mt-1">Automated API test assertions, pre-request scripts, environment management, OpenAPI 3.0 / Swagger documentation.</p>
+          </div>
+          <div class="flex flex-wrap gap-1.5 text-[11px] font-mono pt-2 border-t border-slate-800">
+            <span class="px-2 py-0.5 rounded bg-slate-950 text-slate-300">Postman Tests</span>
+            <span class="px-2 py-0.5 rounded bg-slate-950 text-slate-300">Swagger UI</span>
+            <span class="px-2 py-0.5 rounded bg-slate-950 text-slate-300">Git Branches</span>
+          </div>
+        </div>
+
+        <!-- Frontend & Web -->
+        <div data-skill-category="frontend" class="pro-card p-5 space-y-3">
+          <div class="flex items-center justify-between">
+            <div class="w-10 h-10 rounded-lg bg-pink-600/10 border border-pink-500/20 flex items-center justify-center text-pink-400 font-mono font-bold text-sm">
+              UI
+            </div>
+            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-900 text-slate-300 border border-slate-800">Frontend</span>
+          </div>
+          <div>
+            <h4 class="text-sm font-bold text-white">Modern Web & JavaScript</h4>
+            <p class="text-xs text-slate-400 mt-1">JavaScript (ES6+), HTML5, CSS3, Jinja2 templating, responsive web design, Node.js and Express.js backends.</p>
+          </div>
+          <div class="flex flex-wrap gap-1.5 text-[11px] font-mono pt-2 border-t border-slate-800">
+            <span class="px-2 py-0.5 rounded bg-slate-950 text-slate-300">JavaScript ES6+</span>
+            <span class="px-2 py-0.5 rounded bg-slate-950 text-slate-300">Tailwind CSS</span>
+            <span class="px-2 py-0.5 rounded bg-slate-950 text-slate-300">Node / Express</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================== -->
+  <!-- EDUCATION & VERIFIED CREDENTIALS                         -->
+  <!-- ======================================================== -->
+  <section id="education" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-800/80">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+      
+      <!-- Education Column -->
+      <div class="lg:col-span-6 space-y-5">
+        <div class="flex items-center gap-2 text-xs font-mono text-blue-400">
+          <span class="w-2 h-2 rounded-full bg-blue-400"></span>
+          <span>ACADEMIC BACKGROUND</span>
+        </div>
+        <h3 class="text-xl sm:text-2xl font-bold text-white tracking-tight">Education</h3>
+
+        <!-- University Card -->
+        <div class="pro-card p-6 space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono text-blue-400 font-medium">2023 – 2027 (Expected)</span>
+            <span class="text-xs font-mono px-2 py-0.5 rounded bg-blue-950 text-blue-300 border border-blue-800">In Progress</span>
+          </div>
+          <h4 class="text-base font-bold text-white">BSc. (Hons) in Information Technology</h4>
+          <p class="text-xs sm:text-sm text-slate-300 font-medium">Horizon Campus, Malabe, Sri Lanka</p>
+          <p class="text-xs text-slate-400 leading-relaxed pt-2">
+            Focus areas: Service-Oriented Computing, Software Engineering Architecture, Database Management Systems, and Artificial Intelligence Systems.
+          </p>
+        </div>
+
+        <!-- High School Card -->
+        <div class="pro-card p-6 space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono text-slate-400">2017 & 2020</span>
+            <span class="text-xs font-mono px-2 py-0.5 rounded bg-slate-900 text-slate-300">Completed</span>
+          </div>
+          <h4 class="text-base font-bold text-white">Kingswood College, Kandy, Sri Lanka</h4>
+          <ul class="text-xs text-slate-300 space-y-1 pt-1">
+            <li>• <strong>2020:</strong> G.C.E. Advanced Level Examination</li>
+            <li>• <strong>2017:</strong> G.C.E. Ordinary Level Examination</li>
+          </ul>
+        </div>
+
+        <!-- Academic Mentors / References -->
+        <div class="p-5 rounded-lg bg-slate-900/60 border border-slate-800 space-y-3">
+          <h4 class="text-xs font-mono text-slate-400 tracking-wider uppercase">Academic References</h4>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+            <div class="space-y-1">
+              <strong class="text-white block">Mr. Thilina Samarasinghe</strong>
+              <span class="text-slate-400 block">Senior Lecturer, Horizon Campus</span>
+              <a href="mailto:Thilina.samarasinghe@horizoncampus.edu.lk" class="text-blue-400 hover:underline block truncate">Thilina.samarasinghe@...</a>
+              <span class="text-slate-400 block font-mono">+94 77 361 7305</span>
+            </div>
+            <div class="space-y-1">
+              <strong class="text-white block">Ms. Naduni Jayathilaka</strong>
+              <span class="text-slate-400 block">Lecturer, Horizon Campus</span>
+              <a href="mailto:nadunij@horizoncampus.edu.lk" class="text-blue-400 hover:underline block truncate">nadunij@horizoncampus...</a>
+              <span class="text-slate-400 block font-mono">+94 76 339 6331</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Verified Certifications Column -->
+      <div class="lg:col-span-6 space-y-5">
+        <div class="flex items-center gap-2 text-xs font-mono text-emerald-400">
+          <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+          <span>VERIFIED CREDENTIALS</span>
+        </div>
+        <h3 class="text-xl sm:text-2xl font-bold text-white tracking-tight">Professional Qualifications</h3>
+
+        <!-- Cert 1 -->
+        <div class="pro-card p-5 space-y-2.5">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono text-emerald-400 font-medium">CODL, University of Moratuwa</span>
+            <span class="text-xs font-mono text-slate-400">Verified</span>
+          </div>
+          <h4 class="text-sm font-bold text-white">Python Programming</h4>
+          <p class="text-xs text-slate-400">Comprehensive course covering algorithmic problem solving, object-oriented concepts, and practical Python implementations.</p>
+          <div class="pt-2 flex items-center justify-between border-t border-slate-800">
+            <span class="text-xs font-mono text-slate-400">Credential ID: <code class="text-blue-300">3y3OG3ILCU</code></span>
+            <button data-copy-text="3y3OG3ILCU" data-copy-label="Credential ID copied!" class="text-xs font-mono text-blue-400 hover:text-blue-300 flex items-center gap-1">
+              <i data-lucide="copy" class="w-3.5 h-3.5"></i> Copy ID
+            </button>
+          </div>
+        </div>
+
+        <!-- Cert 2 -->
+        <div class="pro-card p-5 space-y-2.5">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono text-emerald-400 font-medium">CODL, University of Moratuwa</span>
+            <span class="text-xs font-mono text-slate-400">Feb 2025</span>
+          </div>
+          <h4 class="text-sm font-bold text-white">Python for Beginners</h4>
+          <p class="text-xs text-slate-400">Foundational curriculum covering data structures, control flow, functions, and standard libraries.</p>
+          <div class="pt-2 flex items-center justify-between border-t border-slate-800">
+            <span class="text-xs font-mono text-slate-400">Credential ID: <code class="text-blue-300">DmZdWXeYjY</code></span>
+            <button data-copy-text="DmZdWXeYjY" data-copy-label="Credential ID copied!" class="text-xs font-mono text-blue-400 hover:text-blue-300 flex items-center gap-1">
+              <i data-lucide="copy" class="w-3.5 h-3.5"></i> Copy ID
+            </button>
+          </div>
+        </div>
+
+        <!-- Cert 3 -->
+        <div class="pro-card p-5 space-y-2.5">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono text-emerald-400 font-medium">Simplilearn SkillUp</span>
+            <span class="text-xs font-mono text-slate-400">March 2025</span>
+          </div>
+          <h4 class="text-sm font-bold text-white">Python for Beginners</h4>
+          <p class="text-xs text-slate-400">Hands-on application development with core Python libraries and data handling basics.</p>
+          <div class="pt-2 flex items-center justify-between border-t border-slate-800">
+            <span class="text-xs font-mono text-slate-400">Credential ID: <code class="text-blue-300">8105560</code></span>
+            <button data-copy-text="8105560" data-copy-label="Credential ID copied!" class="text-xs font-mono text-blue-400 hover:text-blue-300 flex items-center gap-1">
+              <i data-lucide="copy" class="w-3.5 h-3.5"></i> Copy ID
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================== -->
+  <!-- CONTACT & PROFESSIONAL INQUIRIES                         -->
+  <!-- ======================================================== -->
+  <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-800/80">
+    <div class="pro-card p-8 sm:p-10 bg-slate-900/90 shadow-2xl border border-slate-800">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Left: Inquiry Formulation -->
+        <div class="lg:col-span-7 space-y-5">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-950/80 border border-emerald-500/30 text-xs font-mono text-emerald-300">
+            <span class="pulse-indicator"></span>
+            <span>AVAILABLE FOR SOFTWARE ENGINEERING INTERNSHIPS</span>
+          </div>
+          
+          <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+            Connect & Technical Inquiries
+          </h2>
+          
+          <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+            I am seeking a Software Engineering Internship opportunity to contribute distributed backend architecture and Agentic AI engineering to high-performance production teams.
+          </p>
+
+          <!-- Inquiry Category Selector -->
+          <div class="space-y-3 pt-2">
+            <span class="text-xs font-mono text-slate-400 block uppercase tracking-wider">Select Inquiry Topic:</span>
+            <div class="flex flex-wrap gap-2 text-xs">
+              <button data-inquiry-topic="internship" class="px-3 py-1.5 rounded-lg bg-blue-600 text-white font-medium transition-all">
+                Software Engineering Internship
+              </button>
+              <button data-inquiry-topic="architecture" class="px-3 py-1.5 rounded-lg bg-slate-900 text-slate-400 hover:text-white border border-slate-800 transition-all">
+                TransitFlow Architecture
+              </button>
+              <button data-inquiry-topic="ai" class="px-3 py-1.5 rounded-lg bg-slate-900 text-slate-400 hover:text-white border border-slate-800 transition-all">
+                Smart Farm Hub Agentic AI
+              </button>
+              <button data-inquiry-topic="general" class="px-3 py-1.5 rounded-lg bg-slate-900 text-slate-400 hover:text-white border border-slate-800 transition-all">
+                General Connect
+              </button>
+            </div>
+
+            <!-- Pre-populated message area -->
+            <div class="relative pt-2">
+              <textarea id="inquiry-message" rows="4" class="w-full p-3.5 rounded-lg bg-slate-950 border border-slate-800 text-xs sm:text-sm text-slate-200 font-sans focus:border-blue-500 focus:outline-none leading-relaxed" placeholder="Formulate message..."></textarea>
+            </div>
+          </div>
+
+          <!-- Actions -->
+          <div class="flex flex-wrap items-center gap-3 pt-1">
+            <a id="inquiry-send-btn" href="mailto:a.wiliyamge2001@gmail.com" class="px-5 py-3 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs sm:text-sm flex items-center gap-2 shadow-lg shadow-blue-600/20 transition-all">
+              <i data-lucide="mail" class="w-4 h-4"></i>
+              <span>Send Email Directly</span>
+            </a>
+
+            <button data-copy-text="a.wiliyamge2001@gmail.com" data-copy-label="Email address copied to clipboard" class="px-4 py-3 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-200 text-xs sm:text-sm font-medium flex items-center gap-2 transition-colors">
+              <i data-lucide="copy" class="w-4 h-4 text-blue-400"></i>
+              <span>Copy Email</span>
+            </button>
+
+            <button data-open-resume class="px-4 py-3 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-200 text-xs sm:text-sm font-medium flex items-center gap-2 transition-colors">
+              <i data-lucide="file-text" class="w-4 h-4 text-emerald-400"></i>
+              <span>View Full CV</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Right: Contact Details -->
+        <div class="lg:col-span-5 space-y-3">
+          <div class="p-5 rounded-lg bg-slate-950/80 border border-slate-800 space-y-3">
+            <span class="text-xs font-mono text-slate-400 block uppercase">Contact Details</span>
+            
+            <div class="space-y-2 text-xs font-mono">
+              <div class="flex items-center justify-between p-2 rounded bg-slate-900/80 border border-slate-800">
+                <span class="text-slate-400">Email:</span>
+                <span class="text-blue-300 font-semibold">a.wiliyamge2001@gmail.com</span>
+              </div>
+              <div class="flex items-center justify-between p-2 rounded bg-slate-900/80 border border-slate-800">
+                <span class="text-slate-400">Phone:</span>
+                <span class="text-blue-300 font-semibold">+94 71 704 6911</span>
+              </div>
+              <div class="flex items-center justify-between p-2 rounded bg-slate-900/80 border border-slate-800">
+                <span class="text-slate-400">Location:</span>
+                <span class="text-slate-200">Colombo, Sri Lanka</span>
+              </div>
+              <div class="flex items-center justify-between p-2 rounded bg-slate-900/80 border border-slate-800">
+                <span class="text-slate-400">GitHub:</span>
+                <a href="https://github.com/awiliyamge2001-prog" target="_blank" class="text-blue-400 hover:underline">awiliyamge2001-prog</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================== -->
+  <!-- FOOTER                                                   -->
+  <!-- ======================================================== -->
+  <footer class="py-12 border-t border-slate-800/80 text-xs font-mono text-slate-400 text-center space-y-2">
+    <div class="flex items-center justify-center gap-4">
+      <a href="https://github.com/awiliyamge2001-prog" target="_blank" class="hover:text-blue-400 transition-colors">GitHub</a>
+      <span>•</span>
+      <a href="mailto:a.wiliyamge2001@gmail.com" class="hover:text-blue-400 transition-colors">Email</a>
+      <span>•</span>
+      <button data-open-resume class="hover:text-blue-400 transition-colors">Resume</button>
+      <span>•</span>
+      <a href="#overview" class="hover:text-blue-400 transition-colors">Back to Top ↑</a>
+    </div>
+    <p>© 2026 Akash Williyamge. Software Engineering Portfolio.</p>
+  </footer>
+
+  <!-- ======================================================== -->
+  <!-- RESUME MODAL (PRINTABLE / PDF-READY)                     -->
+  <!-- ======================================================== -->
+  <div id="resume-modal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4 hidden">
+    <div class="relative w-full max-w-3xl max-h-[90vh] bg-slate-900 border border-slate-700/80 rounded-xl shadow-2xl flex flex-col overflow-hidden">
+      
+      <!-- Modal Header -->
+      <div class="flex items-center justify-between px-6 py-4 bg-slate-800/80 border-b border-slate-700">
+        <div class="flex items-center gap-2">
+          <i data-lucide="file-text" class="w-5 h-5 text-blue-400"></i>
+          <h3 class="text-sm font-bold text-white">Akash Williyamge — Curriculum Vitae</h3>
+        </div>
+        <div class="flex items-center gap-2">
+          <button onclick="window.print()" class="px-3 py-1.5 rounded-lg bg-slate-700 hover:bg-slate-600 text-xs font-mono text-slate-200 flex items-center gap-1.5 transition-colors">
+            <i data-lucide="printer" class="w-3.5 h-3.5"></i>
+            <span>Print / Save PDF</span>
+          </button>
+          <button data-close-resume class="p-1.5 rounded-lg hover:bg-slate-700 text-slate-400 hover:text-white transition-colors">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Modal Body (Printable Resume Preview) -->
+      <div class="p-6 sm:p-8 overflow-y-auto space-y-6 text-slate-200 text-sm">
+        
+        <!-- Header -->
+        <div class="border-b border-slate-700 pb-4 space-y-1">
+          <h2 class="text-2xl font-extrabold text-white">AKASH WILLIYAMGE</h2>
+          <div class="flex flex-wrap gap-4 text-xs font-mono text-slate-400">
+            <span>📍 Colombo, Sri Lanka</span>
+            <span>📞 +94 717046911</span>
+            <span>✉️ a.wiliyamge2001@gmail.com</span>
+            <span>🐙 github.com/awiliyamge2001-prog</span>
+          </div>
+        </div>
+
+        <!-- Profile -->
+        <div class="space-y-1">
+          <h4 class="text-xs font-mono font-bold text-blue-400 uppercase tracking-wider">Professional Profile</h4>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            IT undergraduate and Full Stack Developer with hands-on experience in web applications, microservices, REST APIs, databases, and Agentic AI. Skilled in Java, Spring Boot, Python, JavaScript, MongoDB, SQL, Docker, and Git. Seeking a Software Engineering Internship to apply technical skills and gain industry experience.
+          </p>
+        </div>
+
+        <!-- Education -->
+        <div class="space-y-2">
+          <h4 class="text-xs font-mono font-bold text-blue-400 uppercase tracking-wider">Education</h4>
+          <div class="text-xs space-y-1.5">
+            <div>
+              <strong class="text-white">BSc. (Hons) in Information Technology</strong> (2023 – 2027)
+              <div class="text-slate-400">Horizon Campus, Sri Lanka</div>
+            </div>
+            <div>
+              <strong class="text-white">G.C.E. Advanced Level Examination</strong> (2020) & <strong>Ordinary Level</strong> (2017)
+              <div class="text-slate-400">Kingswood College Kandy, Sri Lanka</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projects -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-mono font-bold text-blue-400 uppercase tracking-wider">Featured Projects</h4>
+          
+          <div class="space-y-1 text-xs">
+            <strong class="text-white text-sm">TransitFlow — Smart Public Transport & Traffic Management System</strong>
+            <div class="text-slate-400 font-mono text-[11px]">Java, Spring Boot, Spring Cloud Gateway, MongoDB, Docker, JWT/OAuth 2.0, REST APIs, OpenAPI/Swagger, Postman, Git</div>
+            <ul class="list-disc list-inside text-slate-300 space-y-0.5 mt-1">
+              <li>Developed an end-to-end distributed public transport platform for transit scheduling, traffic monitoring, digital ticketing, and commuter notifications.</li>
+              <li>Implemented a Spring Boot microservices architecture with API Gateway, Authentication, Transit, Traffic, Ticketing, and Notification services.</li>
+              <li>Integrated MongoDB, Docker, JWT/OAuth 2.0, API Key security, rate limiting, and OpenAPI/Swagger for scalable and secure service communication.</li>
+            </ul>
+          </div>
+
+          <div class="space-y-1 text-xs pt-2">
+            <strong class="text-white text-sm">Smart Farm Hub — Agentic AI Online Fruit Store</strong>
+            <div class="text-slate-400 font-mono text-[11px]">Python, Streamlit, Agentic AI, RAG, Multi-Agent Systems, Groq, OpenRouter, OpenAI API</div>
+            <ul class="list-disc list-inside text-slate-300 space-y-0.5 mt-1">
+              <li>Developed a 2-agent Agentic AI system for an online Sri Lankan fruit store, using SalesOrchestratorAgent and FarmOperationsAgent for autonomous task coordination.</li>
+              <li>Implemented intent routing, multi-agent communication, RAG-based farming assistance, delivery calculation, order scheduling, and fruit preservation guidance.</li>
+              <li>Integrated Groq, OpenRouter, and OpenAI APIs with specialized model selection for intent classification, reasoning, and response generation.</li>
+              <li>Built a 20-document domain knowledge base covering organic cultivation, fertilizers, fruit preservation, payments, and delivery information.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Skills -->
+        <div class="space-y-1.5">
+          <h4 class="text-xs font-mono font-bold text-blue-400 uppercase tracking-wider">Technical Skills</h4>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-300">
+            <div>• <strong>Languages:</strong> Java, Python, JavaScript, HTML, CSS, SQL</div>
+            <div>• <strong>Backend:</strong> Spring Boot, Flask, Node.js, Express.js, REST APIs</div>
+            <div>• <strong>Databases:</strong> MongoDB, MySQL, SQLite, PostgreSQL</div>
+            <div>• <strong>DevOps:</strong> Docker, Git, GitHub Actions, CI/CD, Gunicorn</div>
+            <div>• <strong>AI & Data:</strong> Generative AI, RAG, LangChain, LangGraph, Streamlit</div>
+            <div>• <strong>Testing:</strong> Postman Automated Suites, Swagger UI</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="px-6 py-4 bg-slate-800/80 border-t border-slate-700 flex items-center justify-between">
+        <span class="text-xs font-mono text-slate-400">References available upon request</span>
+        <button data-close-resume class="px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs">
+          Close Window
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

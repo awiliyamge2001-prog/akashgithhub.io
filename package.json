@@ -1,0 +1,19 @@
+{
+  "name": "akash-williyamge-portfolio",
+  "version": "1.0.0",
+  "description": "Software Engineering Portfolio for Akash Williyamge - Microservices & Agentic AI Specialist",
+  "scripts": {
+    "dev": "npx serve . -p 3000",
+    "start": "npx serve . -p 3000"
+  },
+  "keywords": [
+    "portfolio",
+    "developer",
+    "spring-boot",
+    "microservices",
+    "agentic-ai",
+    "rag"
+  ],
+  "author": "Akash Williyamge <a.wiliyamge2001@gmail.com>",
+  "license": "MIT"
+}
